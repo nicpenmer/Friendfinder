@@ -26,19 +26,19 @@ router.get("/api/friends/:friend", function(req, res) {
 router.post("/api/friends", function(req, res) {
 
   var newBody = req.body;
-  var highestDiff = 50;
+  var highestDifference = 50;
   var matches = [];
   var scores=[];
 
   // Loop through muppets toget  total difference 
   for (var i = 0; i < muppets.length; i++) {
-    var totalDiff = 0;
+    var totalDifference = 0;
     for (var s = 0; s < 10; s++) {
       if(newBody.scores[s] !== muppets[i].scores[s]){
-        totalDiff += Math.abs(parseInt(newBody.scores[s]) - parseInt(muppets[i].scores[s])); 
+        totalDifference += Math.abs(parseInt(newBody.scores[s]) - parseInt(muppets[i].scores[s])); 
       }
     }
-    matches.push({person: i, difference: totalDiff});
+    matches.push({person: i, difference: totalDifference});
   }
 
   // Review the list of matches to determine match with the lowest difference (best match)
@@ -52,20 +52,23 @@ router.post("/api/friends", function(req, res) {
     }
   }
 
-  // Add the new person to the friends array
+  // Add the new person 
   muppets.push(newBody);
 
-  // Add Match Percentage to the Best Match
-  var matchPercentage = Math.round((highestDiff - bestMatch.difference) / highestDiff * 100);
+  // Add Match Percentage
+  var matchPercentage = Math.round((highestDifference - bestMatch.difference) / highestDifference * 100);
   
-  // Update the best match's list of matched friends
+  // Update the best match's list
   muppets[bestMatch.person].match = {
     Muppet: (muppets.length - 1), 
     percent: matchPercentage
   };
   
-  // Return the best matched friend as a JSON object
+  // Return the best matched muppet as a JSON object
   res.json(muppets[bestMatch.person]);
 });
 
 module.exports = router;
+
+
+///// still needs to make the app actually match data...
