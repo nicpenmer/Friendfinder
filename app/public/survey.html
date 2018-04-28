@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title> Muppet Finder</title>
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	
+</head>
+<body>
+	<div class="container">
+		<h1>Questions</h1>
+		<hr>
+
+		<!-- Start Survey -->
+		<form method="POST" role="form">
+			<div>
+				<h2>About You</h2>
+				<div class="form-group">
+					<label for="name">Name (Required)</label>
+					<input type="text" class="form-control w-50" id="name">
+				</div>
+				<div class="form-group">
+					<label for="photo">Link to Your Photo (Required)</label>
+					<input type="text" class="form-control w-50" id="photo">
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="m-3">
+				<h3>Question 1</h3>
+				<h5>Laughter makes everything better.</h5>
+				<select class="question form-control chosen-select" id="question1">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 2</h3>
+				<h5>An Interspecies relationship is a dealbreaker.</h5>
+				<select class="question form-control chosen-select" id="question2">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 3</h3>
+				<h5>Music is everything: A life without music is no life at all.</h5>
+				<select class="question form-control chosen-select" id="question3">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 4</h3>
+				<h5>Gimme the limelight: I love being center stage.</h5>
+				<select class="question form-control chosen-select" id="question4">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 5</h3>
+				<h5>I consider myself very loyal to my friends.</h5>
+				<select class="question form-control chosen-select" id="question5">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 6</h3>
+				<h5>I try to always tell the truth, despite the consequences.</h5>
+				<select class="question form-control chosen-select" id="question6">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 7</h3>
+				<h5>I am a true original. I have never met anybody else like me.</h5>
+				<select class="question form-control chosen-select" id="question7">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 8</h3>
+				<h5>Sometimes I get sad and have low self esteem. Sadness is a part of life and I don't let it keep me down.</h5>
+				<select class="question form-control chosen-select" id="question8">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3">
+				<h3>Question 9</h3>
+				<h5>Not everything has to be spoken. I'm ok with someone of few words.</h5>
+				<select class="question form-control chosen-select" id="question9">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+			<div class="m-3 mb-3">
+				<h3>Question 10</h3>
+				<h5>I am the kind of person who likes to take charge and lead.</h5>
+				<select class="question form-control chosen-select" id="question10">
+					<option></option>
+					<option value="1">Strongly disagree</option>
+					<option value="2">Disagree</option>
+					<option value="3">Neutral</option>
+					<option value="4">Agree</option>
+					<option value="5">Strongly agree</option>
+				</select>
+			</div>
+		</form>
+		<button id="sendSurvey" type="submit" class="btn btn-success btn-block" data-toggle="modal" data-target="#bestMatchModal">
+			<i class="far fa-check-circle"></i>
+			Which Muppet is my BFF?
+		</button>
+		<!-- End Survey -->
+
+		<hr>
+
+
+	</div>
+
+	<!-- Start Modal -->
+	<div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="bestMatchModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="bestMatchModalLabel"><span id="match-perc">0</span>% Match</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body d-flex flex-row">
+	      	<div class="modal-left">
+		      	<div>You are best matched with:</div>
+		      	<h3 id="match-name" class="text-center"></h3>
+	      	</div>
+	      	<div class="modal-right ml-5">
+	       		<img id="match-photo" src="" alt="">
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- End Modal -->
+
+	<!-- Bootstrapfor Modal-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	
+</body>
+</html>
